@@ -12,4 +12,8 @@ sequelize.authenticate()
   .then(() => console.log('🟢 Connected to PostgreSQL via Sequelize'))
   .catch(err => console.error('🔴 Sequelize DB connection error:', err));
 
+  sequelize.sync()
+  .then(() => console.log('📦 Models synced'))
+  .catch(err => console.error('❌ Sync error:', err));
+
 export default sequelize;
