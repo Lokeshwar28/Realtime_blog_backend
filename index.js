@@ -36,7 +36,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:5173', 'https://your-frontend.vercel.app'],
+    origin: ['http://localhost:5173', 'https://realtime-blog-frontend.vercel.app/'],
     methods: ['GET', 'POST']
   }
 });
